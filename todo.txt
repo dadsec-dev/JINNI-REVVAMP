@@ -1,0 +1,11 @@
+https://answers.netlify.com/t/netlify-next-js-images-throw-ipx-error-500/51632/21?page=3
+
+https://github.com/orgs/community/discussions/50878
+
+
+https://paulonteri.com/thoughts/how-to/deploy-nextjs-to-netlify-manually
+
+
+https://console.neon.tech/app/projects/shy-lab-558072
+
+// "build": "prisma generate && prisma migrate deploy && next build",

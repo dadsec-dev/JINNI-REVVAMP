@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 400px) {
+  .background-gradient::before {
+    background: radial-gradient(
+      10% 60% at 50% 50%,
+      #35374c 0%,
+      #101119 100%
+    );
+    z-index: -10;
+    content: "";
+    position: absolute;
+    inset: 0px;
+    transform: scale(1);
+    pointer-events: none;
+  }
+}
+
+.bg-\[\#17181C\] {
+  --tw-bg-opacity: 1;
+  background-color: #101119;
+}

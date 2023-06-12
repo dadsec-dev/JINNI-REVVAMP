@@ -1,0 +1,2 @@
+add pricing table https://stripe.com/docs/payments/checkout/pricing-table
+

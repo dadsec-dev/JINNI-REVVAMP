@@ -1,0 +1,13 @@
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+[build]
+command = "yarn next build"
+publish = ".next"
+
+[[headers]]
+  for = "/_next/image/*"
+
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    X-Test = 'foobar'
