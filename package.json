@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm install --force"
   },
   "engines": {
     "node": "18.x"
@@ -54,6 +55,6 @@
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.4"
   }
 }
