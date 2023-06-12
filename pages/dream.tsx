@@ -15,7 +15,7 @@ import appendNewToName from "../utils/appendNewToName";
 import downloadPhoto from "../utils/downloadPhoto";
 import DropDown from "../components/DropDown";
 import { roomType, rooms, themeType, themes } from "../utils/dropdownTypes";
-import  {GenerateResponseData}  from "./api/generate";
+// import  {GenerateResponseData}  from "./api/generate";
 // import { useSession, signIn } from "next-auth/react";
 import useSWR from "swr";
 import { Rings } from "react-loader-spinner";
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
       body: JSON.stringify({ imageUrl: fileUrl, theme, room }),
     });
 
-    let response = (await res.json()) as GenerateResponseData;
+    let response = (await res.json()) ;
     if (res.status !== 200) {
       setError(response as any);
     } else {
