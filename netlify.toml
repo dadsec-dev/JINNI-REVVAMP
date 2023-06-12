@@ -2,12 +2,12 @@
 package = "@netlify/plugin-nextjs"
 
 [build]
-command = "yarn next build"
+command = "npm install --force && yarn next build"
 publish = ".next"
 
 [[headers]]
-  for = "/_next/image/*"
+for = "/_next/image/*"
 
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000"
-    X-Test = 'foobar'
+[headers.values]
+Strict-Transport-Security = "max-age=31536000"
+X-Test = "foobar"
