@@ -15,9 +15,9 @@ export const authOptions: NextAuthOptions = {
 
   ],
 
-  session: {
-    strategy: 'jwt',
-   },
+  // session: {
+  //   strategy: 'jwt',
+  //  },
 
 
 };
