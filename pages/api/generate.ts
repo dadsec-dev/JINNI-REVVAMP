@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const api = "r8_QOVQKlXeNHBONykEptlqOTfRDAVZqjx0SRmzB";
+const api = process.env.REPLICATE_API;
 
 export default async function handler(
   req: NextApiRequest,
