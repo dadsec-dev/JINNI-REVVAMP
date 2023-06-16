@@ -134,10 +134,12 @@ const Home: NextPage = () => {
 
   const { address, isConnecting, isDisconnected } = useAccount();
 
-  const {data:dt, isError, isLoading} = useBalance({
+  const {data:ialance, isError, isLoading} = useBalance({
     address: address,
     token: addrr,
   })
+
+  
 
   // useEffect(() => {
   //   if (dt) {
@@ -147,12 +149,17 @@ const Home: NextPage = () => {
   
   useEffect(() => {
     console.log("fetching...");
-  }, [dt]);
+    console.log("ialance.value:", ialance?.value);
+  }, [ialance]);
+
+  
 
 
 
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+
+    <div className="bg-[#319a46]">
+        <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
         <title>AI Revamped Luxury</title>
       </Head>
@@ -183,7 +190,7 @@ const Home: NextPage = () => {
           </a> */}
         {/* )} */}
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-green-600">dream</span> space
+          Generate your <span className="text-[#000000]">dream</span> space
         </h1>
         {/* {status === "authenticated" && data && !restoredImage && (
           <p className="text-gray-400">
@@ -247,60 +254,68 @@ const Home: NextPage = () => {
                   />
                 </div>
                 ) : status === "authenticated" && !originalPhoto ? (  */}
-                <>
-                  <div className="space-y-4 w-full max-w-sm">
-                    <div className="flex mt-3 items-center space-x-3">
-                      <Image
-                        src="/number-1-white.svg"
-                        width={30}
-                        height={30}
-                        alt="1 icon"
+                {/* {ialance && ialance.value !== undefined && (
+      ialance.value / BigInt(10**18) >= BigInt(10000000) ? ( */}
+
+                {ialance && ialance?.value !== undefined && ialance.value / BigInt(10 ** 18) >= BigInt(10000000) ? (
+                    <>
+                    <div className="space-y-4 w-full max-w-sm">
+                      <div className="flex mt-3 items-center space-x-3">
+                        <Image
+                          src="/number-1-white.svg"
+                          width={30}
+                          height={30}
+                          alt="1 icon"
+                        />
+                        <p className="text-left font-medium">
+                          Choose your room theme.
+                        </p>
+                      </div>
+                      <DropDown
+                        theme={theme}
+                        // @ts-ignore
+                        setTheme={(newTheme) => setTheme(newTheme)}
+                        themes={themes}
                       />
-                      <p className="text-left font-medium">
-                        Choose your room theme.
-                      </p>
                     </div>
-                    <DropDown
-                      theme={theme}
-                      // @ts-ignore
-                      setTheme={(newTheme) => setTheme(newTheme)}
-                      themes={themes}
-                    />
-                  </div>
-                  <div className="space-y-4 w-full max-w-sm">
-                    <div className="flex mt-10 items-center space-x-3">
-                      <Image
-                        src="/number-2-white.svg"
-                        width={30}
-                        height={30}
-                        alt="1 icon"
+                    <div className="space-y-4 w-full max-w-sm">
+                      <div className="flex mt-10 items-center space-x-3">
+                        <Image
+                          src="/number-2-white.svg"
+                          width={30}
+                          height={30}
+                          alt="1 icon"
+                        />
+                        <p className="text-left font-medium">
+                          Choose your room type.
+                        </p>
+                      </div>
+                      <DropDown
+                        theme={room}
+                        // @ts-ignore
+                        setTheme={(newRoom) => setRoom(newRoom)}
+                        themes={rooms}
                       />
-                      <p className="text-left font-medium">
-                        Choose your room type.
-                      </p>
                     </div>
-                    <DropDown
-                      theme={room}
-                      // @ts-ignore
-                      setTheme={(newRoom) => setRoom(newRoom)}
-                      themes={rooms}
-                    />
-                  </div>
-                  <div className="mt-4 w-full max-w-sm">
-                    <div className="flex mt-6 w-96 items-center space-x-3">
-                      <Image
-                        src="/number-3-white.svg"
-                        width={30}
-                        height={30}
-                        alt="1 icon"
-                      />
-                      <p className="text-left font-medium">
-                        Upload a picture of your room.
-                      </p>
+                    
+                    <div className="mt-4 w-full max-w-sm">
+                      <div className="flex mt-6 w-96 items-center space-x-3">
+                        <Image
+                          src="/number-3-white.svg"
+                          width={30}
+                          height={30}
+                          alt="1 icon"
+                        />
+                        <p className="text-left font-medium">
+                          Upload a picture of your room.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <UploadDropZone />
-                </>
+                    {/* {ialance && ialance?.value && BigInt(ialance?.value)>= 100000000000 ? (<UploadDropZone />) : ("not enough JINNI tokens")} */}
+                    <UploadDropZone />
+                  </>
+                ): (<h1>You need more JINNI tokens</h1>)}
+                
               {/* ) : (
                 !originalPhoto && (
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
@@ -425,6 +440,8 @@ const Home: NextPage = () => {
       </main>
       <Footer />
     </div>
+    </div>
+    
   );
 };
 

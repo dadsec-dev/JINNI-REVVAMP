@@ -19,8 +19,8 @@ export default function Header({
           width={150}
           height={24}
         /> */}
-        <h1 className="sm:text-3xl text-xl font-bold ml-2 tracking-tight text-slate-600">
-          <span className="sm:text-3xl text-xl font-light ml-2 tracking-tight text-green-600">JINNI</span> Revamp
+        <h1 className="sm:text-3xl text-xl font-bold ml-2 tracking-tight text-[#000000]">
+          <span className="sm:text-3xl text-xl font-extrabold ml-2 tracking-tight text-[#f3f3f3]">JINNI</span> Revamp
         </h1>
       </Link>
       {email ? (
@@ -54,7 +54,7 @@ export default function Header({
         </div>
       ) : (
         <Link
-          className="flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-green-600 text-white px-5 py-2 text-sm shadow-md hover:bg-green-400 bg-green-600 font-medium transition"
+          className="flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-[#fff] text-white px-5 py-2 text-sm shadow-md hover:bg-[#fff] bg-[#fff] font-medium transition"
           href="/"
         >
           {/* <p>Sign Up </p> */} <ConnectButton />
