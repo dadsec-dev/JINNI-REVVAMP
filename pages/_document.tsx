@@ -2,15 +2,15 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
-    let description = "Revamp Luxury Real Estates in seconds.";
-    let ogimage = "/favicon.png";
-    let sitename = "AI Luxury Revamped";
-    let title = "AI Luxury Estate Revamp";
+    let description = "Jinni AI interior Revamp.";
+    let ogimage = "/jfavicon.png";
+    let sitename = "Jinni AI interior Revamp";
+    let title = "Jinni AI interior Revamp";
 
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/jfavicon.png" />
           <meta name="description" content={description} />
           <meta property="og:site_name" content={sitename} />
           <meta property="og:description" content={description} />

@@ -19,6 +19,7 @@ export default function Header({
           width={150}
           height={24}
         /> */}
+        <Image alt="jinni icon"src="/jhead.png" width={50} height={50}/>
         <h1 className="sm:text-3xl text-xl font-bold ml-2 tracking-tight text-[#000000]">
           <span className="sm:text-3xl text-xl font-extrabold ml-2 tracking-tight text-[#f3f3f3]">JINNI</span> Revamp
         </h1>

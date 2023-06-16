@@ -114,7 +114,7 @@ const Home = () => {
                   <h3 className="mb-1 font-medium text-lg">Before</h3>
                   <Image
                     alt="Original photo of a room with roomGPT.io"
-                    src="/before.png"
+                    src="/jafter.jpeg"
                     className="w-full object-cover h-96 rounded-2xl"
                     width={400}
                     height={400}
@@ -126,7 +126,7 @@ const Home = () => {
                     alt="Generated photo of a room with roomGPT.io"
                     width={400}
                     height={400}
-                    src="/after.png"
+                    src="/jbefore.png"
                     className="w-full object-cover h-96 rounded-2xl sm:mt-0 mt-2"
                   />
                 </div>
