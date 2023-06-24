@@ -90,7 +90,7 @@ const Home = () => {
 
           <div className="hover:bg-[#000000]">
             {data?.value !== undefined &&
-              (data.value / BigInt(10 ** 18) >= BigInt(10000000) ? (
+              (data.value / BigInt(10 ** 18) >= BigInt(2000000) ? (
                 <Link
                   className="bg-[#fff] rounded-xl text-green-800 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-greeb-500 transition"
                   href="/dream"
@@ -117,15 +117,15 @@ const Home = () => {
                     src="/jafter.jpeg"
                     className="w-full object-cover h-96 rounded-2xl"
                     width={400}
-                    height={400}
+                    height={100}
                   />
                 </div>
                 <div className="sm:mt-0 mt-8">
                   <h3 className="mb-1 font-medium text-lg">After</h3>
                   <Image
                     alt="Generated photo of a room with roomGPT.io"
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={500}
                     src="/jbefore.png"
                     className="w-full object-cover h-96 rounded-2xl sm:mt-0 mt-2"
                   />

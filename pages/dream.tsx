@@ -257,7 +257,7 @@ const Home: NextPage = () => {
                 {/* {ialance && ialance.value !== undefined && (
       ialance.value / BigInt(10**18) >= BigInt(10000000) ? ( */}
 
-                {ialance && ialance?.value !== undefined && ialance.value / BigInt(10 ** 18) >= BigInt(10000000) ? (
+                {ialance && ialance?.value !== undefined && ialance.value / BigInt(10 ** 18) >= BigInt(2000000) ? (
                     <>
                     <div className="space-y-4 w-full max-w-sm">
                       <div className="flex mt-3 items-center space-x-3">
