@@ -59,7 +59,8 @@ export default async function handler(
       const jsonFinalResponse = await finalResponse.json();
 
       if (jsonFinalResponse.status === "succeeded") {
-        generatedImage = jsonFinalResponse.output[1] as string;
+        // generatedImage = jsonFinalResponse.output[1] as string;
+        generatedImage = jsonFinalResponse.output[1];
       } else if (jsonFinalResponse.status === "failed") {
         break;
       } else {
